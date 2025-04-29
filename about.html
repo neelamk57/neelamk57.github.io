@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Your Name</title>
+    <meta name="description" content="Learn more about my background, skills, and interests">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <style>
+        /* About Page Specific Styles */
+        .about-section {
+            padding: 80px 0;
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            align-items: start;
+        }
+        
+        .profile-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .about-content h2 {
+            text-align: left;
+        }
+        
+        .bio-details {
+            margin-bottom: 30px;
+        }
+        
+        .bio-details p {
+            margin-bottom: 15px;
+        }
+        
+        .education, .experience, .interests {
+            margin-bottom: 30px;
+        }
+        
+        .education h3, .experience h3, .interests h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .education-item, .experience-item {
+            margin-bottom: 20px;
+        }
+        
+        .period {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+        
+        .degree, .role {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .institution, .company {
+            margin-bottom: 10px;
+        }
+        
+        .interests ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .interests ul li {
+            background-color: #e0f2fe;
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .skills-section {
+            background-color: #f1f5f9;
+            padding: 80px 0;
+        }
+        
+        .skills-container h2 {
+            margin-bottom: 50px;
+        }
+        
+        .skill-group {
+            margin-bottom: 40px;
+        }
+        
+        .skill-group h3 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .skill-bars {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .skill-item {
+            margin-bottom: 15px;
+        }
+        
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .skill-progress {
+            height: 10px;
+            background-color: var(--border-color);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            transition: width 1s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .profile-image {
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            
+            .about-content h2 {
+                text-align: center;
+            }
+            
+            .skills-section {
+                padding: 60px 0;
+            }
+            
+            .skill-bars {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">YourName</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="blog/index.html">Blog</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-container">
+                    <div class="profile-image">
+                        <img src="assets/images/profile-photo.jpg" alt="Your Name">
+                    </div>
+                    <div class="about-content">
+                        <h2>About Me</h2>
+                        <div class="bio-details">
+                            <p>Hello! I'm <strong>Your Name</strong>, a computer science student at [Your University]. I'm passionate about [your main interests, e.g., web development, machine learning, etc.] and dedicated to creating meaningful solutions through technology.</p>
+                            
+                            <p>My journey in tech began [brief background of how you got into tech or CS]. Since then, I've been constantly learning and expanding my skillset through academic courses, personal projects, and collaborative work.</p>
+                            
+                            <p>When I'm not coding or studying, I enjoy [mention your hobbies or interests outside of tech]. I believe that diverse experiences contribute to more creative problem-solving and innovative thinking.</p>
+                        </div>
+                        
+                        <div class="education">
+                            <h3>Education</h3>
+                            <div class="education-item">
+                                <div class="period">20XX - Present</div>
+                                <div class="degree">Bachelor of Science in Computer Science</div>
+                                <div class="institution">Your University</div>
+                                <p>Relevant courseworks: Data Structures & Algorithms, Web Development, Database Systems, Machine Learning, Software Engineering</p>
+                            </div>
+                            <!-- Add more education items if applicable -->
+                        </div>
+                        
+                        <div class="experience">
+                            <h3>Experience</h3>
+                            <div class="experience-item">
+                                <div class="period">June 20XX - August 20XX</div>
+                                <div class="role">Software Developer Intern</div>
+                                <div class="company">Company Name</div>
+                                <p>Developed and maintained web applications using React.js and Node.js. Worked in an agile team environment, participating in daily stand-ups and sprint planning.</p>
+                            </div>
+                            <!-- Add more experience items if applicable -->
+                        </div>
+                        
+                        <div class="interests">
+                            <h3>Interests</h3>
+                            <ul>
+                                <li>Web Development</li>
+                                <li>Machine Learning</li>
+                                <li>Open Source</li>
+                                <li>UI/UX Design</li>
+                                <li>Data Visualization</li>
+                                <li>Cloud Computing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Skills Section -->
+        <section class="skills-section" id="skills">
+            <div class="container skills-container">
+                <h2>Skills & Expertise</h2>
+                
+                <div class="skill-group">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-bars">
+                        <div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>JavaScript</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Python</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>HTML/CSS</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 95%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>React.js</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Node.js</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 75%;"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>SQL</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-group">
+                    <h3>Tools & Frameworks</h3>
+                    <div class="skill-bars">
+                        <div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Git & GitHub</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>VS Code</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Docker</span>
+                                    <span>65%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 65%;"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>AWS</span>
+                                    <span>60%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 60%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-group">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-bars">
+                        <div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Problem Solving</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 95%;"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Teamwork</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Communication</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Time Management</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; <span id="year"></span> Your Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
