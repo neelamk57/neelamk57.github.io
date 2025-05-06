@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Neelam Karki</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Resume-specific styles that don't conflict with existing styles */
+        .resume-header {
+            position: relative;
+        }
+        
+        .resume-header h1 {
+            font-size: 24px;
+            text-align: left;
+            text-transform: none;
+            border-bottom: 2px solid var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .resume-section h2 {
+            font-size: 18px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 3px;
+            margin: 15px 0 5px 0;
+        }
+        
+        .resume-item h3 {
+            font-size: 16px;
+            margin: 12px 0 3px 0;
+        }
+        
+        .item-subtitle {
+            font-weight: 500;
+            color: var(--text-light);
+        }
+        
+        .item-date {
+            float: right;
+            color: var(--text-light);
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .skill-category {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .project-title {
+            font-weight: 600;
+        }
+        
+        .project-link {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            word-break: break-all;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .certifications {
+            column-count: 2;
+            column-gap: 2rem;
+        }
+        
+        .pdf-download {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        
+        .pdf-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .pdf-btn:hover {
+            background-color: #2980b9;
+        }
+        
+        @media (max-width: 768px) {
+            .item-date {
+                float: none;
+                display: block;
+            }
+            
+            .certifications {
+                column-count: 1;
+            }
+            
+            .pdf-download {
+                position: static;
+                margin-bottom: 1.5rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="resume-header">
+            <div class="pdf-download">
+                <a href="assets/Resume.pdf" download class="pdf-btn">
+                    <i class="fas fa-download"></i> Download PDF
+                </a>
+            </div>
+            <h1>Neelam Karki</h1>
+            <div class="contact-info">
+                <span><i class="fas fa-map-marker-alt"></i> Vermillion, SD</span>
+                <span><i class="fas fa-envelope"></i> neelam.karki@coyotes.usd.edu</span>
+                <span><i class="fas fa-phone"></i> 605-728-8280</span>
+                <span><i class="fab fa-linkedin"></i> linkedin.com/in/neelamkarki</span>
+                <span><i class="fab fa-github"></i> github.com/neelamk57</span>
+            </div>
+        </div>
+
+        <section class="resume-section">
+            <h2><strong>Professional Summary</strong></h2>
+            <p>A detail-oriented engineer with 1+ years of experience designing, optimizing, and implementing technical solutions across diverse domains. Proficient in Python, SQL, and backend development tools, with a strong foundation in data engineering, AI/ML, and system design. Passionate about leveraging technology to drive innovation.</p>
+        </section>
+
+        <section class="resume-section">
+            <h2><strong>Education</strong></h2>
+            <div class="resume-item">
+                <h3>University of South Dakota</h3>
+                <p class="item-subtitle">MS in Computer Science</p>
+                <p class="item-date">Jan 2025 – Present</p>
+                <ul>
+                    <li><strong>Coursework</strong>: Applied Reinforcement Learning, Artificial Intelligence, Seminar</li>
+                </ul>
+            </div>
+            
+            <div class="resume-item">
+                <h3>Institute of Engineering, Thapathali Campus</h3>
+                <p class="item-subtitle">BE in Electronics, Communication and Information Engineering</p>
+                <p class="item-date">Nov 2018 – Apr 2023</p>
+                <ul>
+                    <li><strong>Coursework</strong>: Data Structures and Algorithms, Data Mining, Object Oriented Programming</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2><strong>Experience</strong></h2>
+            <div class="resume-item">
+                <h3>Data Engineer</h3>
+                <p class="item-subtitle">Wiseyak Inc. – Naval, Kathmandu</p>
+                <p class="item-date">Jan 2024 – Present</p>
+                <ul>
+                    <li>Developed and optimized backend infrastructure and database systems for AI/ML-powered platforms</li>
+                    <li>Integrated and maintained data pipelines, including Large Language Models (LLMs) for data retrieval, ranking, and processing from saved chat transcripts and provide metadata to a system-wide search database</li>
+                    <li>Led backend development for multiple web applications and API implementations</li>
+                    <li>Handled data scraping, processing, and indexing across different platforms</li>
+                </ul>
+            </div>
+            <br>
+            <div class="resume-item">
+                <h3>Data Engineer Intern</h3>
+                <p class="item-subtitle">Wiseyak Inc. – Naval, Kathmandu</p>
+                <p class="item-date">Jul 2023 – Dec 2023</p>
+                <ul>
+                    <li>Gained experience in data wrangling and cleaning large datasets</li>
+                    <li>Worked on implementing search and indexing solutions using Elasticsearch</li>
+                    <li>Assisted in backend development for internal tools and services</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2><strong>Skills</strong></h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h4>Languages</h4>
+                    <ul>
+                        <li>C++, C, Python, SQL</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Databases</h4>
+                    <ul>
+                        <li>Elasticsearch, Solr, SQLite, PostgreSQL, Redis</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Data Engineering</h4>
+                    <ul>
+                        <li>Apache Airflow, Scrapy, Selenium, Shell Scripting</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Machine Learning & AI</h4>
+                    <ul>
+                        <li>Pandas, NumPy, Scikit-Learn, NLTK, TensorFlow, PyTorch, Langchain</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Data Visualization</h4>
+                    <ul>
+                        <li>Grafana, IBM Cognos Analytics, Tableau</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Development Tools</h4>
+                    <ul>
+                        <li>Git, Docker, FastAPI, Postman</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Soft Skills</h4>
+                    <ul>
+                        <li>Problem Solving, Critical Thinking, Communication, Collaboration, and Presentation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2><strong>Projects</strong></h2>
+            <div class="project">
+                <h4 class="project-title">Transformer-Based Deep Coding Engine for Generating High-Level Source Code</h4>
+                <a href="https://github.com/neelamk57/co" class="project-link">github.com/neelamk57/co</a>
+                <ul>
+                    <li>Compared the performance of base transformer model with a pretrained Code-T5 model for C++ source code generation task</li>
+                    <li><strong>Tools Used</strong>: Python, PyTorch, Keras, TensorFlow</li>
+                </ul>
+            </div>
+            <br>
+            <div class="project">
+                <h4 class="project-title">Global VIVA (Voice Integrated Virtual Assistant)</h4>
+                <a href="https://chatbot/gibl.com.np" class="project-link">chatbot/gibl.com.np</a>
+                <ul>
+                    <li>Designed a voice-enabled virtual assistant that offers real-time banking services information, integrating speech recognition and AI-driven query handling for enhanced customer experience</li>
+                    <li><strong>Tools Used</strong>: FastAPI, Langchain, LlamaIndex</li>
+                </ul>
+            </div>
+            <br>
+            <div class="project">
+                <h4 class="project-title">AccountGPT/Taxbase for American tax-related queries</h4>
+                <ul>
+                    <li>Built an AI-powered chatbot leveraging GPT models to provide guidance on U.S. tax-related queries, ensuring users receive clear, structured, and reliable tax information</li>
+                    <li><strong>Tools Used</strong>: FastAPI, Langchain, LlamaIndex</li>
+                </ul>
+            </div>
+            <br>
+            <div class="project">
+                <h4 class="project-title">Solt-Learning To Rank (LTR) Enabled Medical Information Retrieval System</h4>
+                <ul>
+                    <li>Implemented a Learning-to-Rank (LTR) model in Apache Solr to optimize the ranking of medical search results, improving relevance and accuracy in healthcare-related queries</li>
+                    <li><strong>Tools Used</strong>: Solr, Elasticsearch, LightGBM</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2><strong>Certifications</strong></h2>
+            <div class="certifications">
+                <ul>
+                    <li>Deep Learning with PyTorch : Generative Adversarial Network</li>
+                    <li>Data Analysis with Python</li>
+                    <li>ETL and Data Pipelines with Shell, Airflow and Kafka</li>
+                    <li>Python and SQL for Data Science</li>
+                    <li>Relational Database Administration (DBA)</li>
+                    <li>Data Warehouse Fundamentals</li>
+                    <li>Machine Learning Pipelines with Azure ML Studio</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/neelamkarki" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/neelamk57" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <p>&copy; 2025 Neelam Karki. All rights reserved.</p>
+    </footer>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/neelamkarki" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/neelamk57" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <p>&copy; 2025 Neelam Karki. All rights reserved.</p>
+    </footer>
+</body>
+</html>
